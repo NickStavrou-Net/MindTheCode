@@ -29,7 +29,7 @@ public class UsersMapper {
                 );
     }
 
-    private String mapStatus(User user) {
+    public String mapStatus(User user) {
         return String.valueOf(user.getStatus()).toLowerCase();
     }
 

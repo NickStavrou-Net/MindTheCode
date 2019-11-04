@@ -51,7 +51,6 @@ public class TourService {
             if (tour.getFinalPrice() > 500)
                 tours.add(tour);
         }
-
         return tours;
     }
 }
