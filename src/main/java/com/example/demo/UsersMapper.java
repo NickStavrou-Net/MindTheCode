@@ -10,7 +10,8 @@ import java.util.List;
 @Component
 public class UsersMapper {
 
-    public List<UserResponse> mapUsers(Iterable<User> all) {
+    public List<UserResponse> mapUsers(Iterable<User> all)
+    {
         List<UserResponse> users = new ArrayList<>();
         for(User user : all) {
             UserResponse userResponse = mapUserToUserResponse(user);
@@ -19,7 +20,8 @@ public class UsersMapper {
         return users;
     }
 
-    private UserResponse mapUserToUserResponse(User user) {
+    private UserResponse mapUserToUserResponse(User user)
+    {
         return new UserResponse(
                         user.getId(),
                         user.getFirstName(),
@@ -29,7 +31,8 @@ public class UsersMapper {
                 );
     }
 
-    public String mapStatus(User user) {
+    public String mapStatus(User user)
+    {
         return String.valueOf(user.getStatus()).toLowerCase();
     }
 

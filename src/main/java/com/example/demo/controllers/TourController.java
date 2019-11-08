@@ -20,17 +20,20 @@ public class TourController {
     private TourService service;
 
     @GetMapping("/allTours")
-    public GetAllToursResponse getAllTours() {
+    public GetAllToursResponse getAllTours()
+    {
         return new GetAllToursResponse(service.getAllTours());
     }
 
     @GetMapping("/getToursByPackageId/{tourPackageId}")
-    public GetAllToursResponse getToursByPackageId(@PathVariable Long tourPackageId) {
+    public GetAllToursResponse getToursByPackageId(@PathVariable Long tourPackageId)
+    {
         return new GetAllToursResponse(service.getToursByPackageId(tourPackageId));
     }
 
     @GetMapping("/expensiveTours")
-    public GetAllToursResponse getExpensiveTours() {
+    public GetAllToursResponse getExpensiveTours()
+    {
         return new GetAllToursResponse(service.getExpensiveTours());
     }
 }

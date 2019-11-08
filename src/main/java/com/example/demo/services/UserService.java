@@ -18,11 +18,13 @@ public class UserService {
     @Autowired
     UsersMapper mapper;
 
-    public List<UserResponse> getAllUsers() {
+    public List<UserResponse> getAllUsers()
+    {
         return mapper.mapUsers(repository.findAll());
     }
 
-    public List<UserResponse> getUserStatus(String userStatus) {
+    public List<UserResponse> getUserStatus(String userStatus)
+    {
         Iterable<UserResponse> mappedUsers = getAllUsers();
         List<UserResponse> users = new ArrayList<>();
         for(UserResponse user : mappedUsers){
