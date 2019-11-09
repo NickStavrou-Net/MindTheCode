@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.UsersMapper;
+import com.example.demo.mappers.UsersMapper;
 import com.example.demo.pojos.UserResponse;
 import com.example.demo.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;

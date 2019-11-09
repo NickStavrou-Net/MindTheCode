@@ -1,6 +1,6 @@
 package com.example.demo.services;
 
-import com.example.demo.TourPackageMapper;
+import com.example.demo.mappers.TourPackageMapper;
 import com.example.demo.pojos.TourPackage;
 import com.example.demo.pojos.TourPackageResponse;
 import com.example.demo.repositories.TourPackageRepository;

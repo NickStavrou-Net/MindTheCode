@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.List;
 
 @Service
-public class HomeInteractor
+public class HomeInteractor//otan 2 klaseis den exoun sxesi metaksi toys tote ftiaxnoume ena service san kai avto
 {
     @Autowired
     UserService userService;
