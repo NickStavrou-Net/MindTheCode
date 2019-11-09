@@ -19,7 +19,8 @@ public class TourService {
     @Autowired
     private TourRepository repository;
 
-    public List<TourResponse> getAllTours() {
+    public List<TourResponse> getAllTours()
+    {
         Iterable<Tour> retrievedTours = repository.findAll();
         List<TourResponse> tours = new ArrayList<>();
 
@@ -28,12 +29,10 @@ public class TourService {
         }
 
         return tours;
-/*        retrievedTours.forEach((tour)-> {
-
-        });*/
     }
 
-    public List<TourResponse> getToursByPackageId(Long tourPackageId) {
+    public List<TourResponse> getToursByPackageId(Long tourPackageId)
+    {
         Iterable<Tour> retrievedTours = repository.findAll();
         List<TourResponse> tours = new ArrayList<>();
         for (Tour tour : retrievedTours) {
@@ -44,7 +43,8 @@ public class TourService {
         return tours;
     }
 
-    public List<TourResponse> getExpensiveTours() {
+    public List<TourResponse> getExpensiveTours()
+    {
         List<TourResponse> mappedTours = getAllTours();
         List<TourResponse> tours = new ArrayList<>();
         for (TourResponse tour : mappedTours) {
@@ -53,4 +53,21 @@ public class TourService {
         }
         return tours;
     }
+
+    public List<TourResponse> getToursBySearch(String search, int id)
+    {
+        Iterable<Tour> tours = repository.findAll();
+        List<TourResponse> tourToReturn = new ArrayList<>();
+        if(search.equals("tourPackage"))
+        {
+            for (Tour tour : tours)
+            {
+                if(tour.getTourPackage().getId() == id)
+                {
+                   tourToReturn.add(mapper.mapTourResponseFromTour(tour));
+                }
+            }
+        }
+        return  tourToReturn;
+     }
 }
