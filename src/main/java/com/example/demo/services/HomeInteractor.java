@@ -1,11 +1,10 @@
 package com.example.demo.services;
 
-import com.example.demo.pojos.HomePageResponse;
-import com.example.demo.pojos.TourPackageResponse;
-import com.example.demo.pojos.UserResponse;
+import com.example.demo.responses.HomePageResponse;
+import com.example.demo.responses.TourPackageResponse;
+import com.example.demo.responses.UserResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
@@ -28,4 +27,5 @@ public class HomeInteractor//otan 2 klaseis den exoun sxesi metaksi toys tote ft
         HomePageResponse response = new HomePageResponse(title, numberOfTourPackages, numberOfUsers, tourPackageResponses, userResponses);
         return response;
     }
+
 }

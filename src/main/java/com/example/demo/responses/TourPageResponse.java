@@ -1,4 +1,4 @@
-package com.example.demo.pojos;
+package com.example.demo.responses;
 
 import java.util.List;
 
@@ -9,7 +9,8 @@ public class TourPageResponse
     private List<TourResponse> tourResponseList;
     private List<UserResponse> userResponseList;
 
-    public TourPageResponse(int numberOfTours, int numberOfUsers, List<TourResponse> responseList, List<UserResponse> userResponseList) {
+    public TourPageResponse(int numberOfTours, int numberOfUsers, List<TourResponse> responseList, List<UserResponse> userResponseList)
+    {
         this.numberOfTours = numberOfTours;
         this.numberOfUsers = numberOfUsers;
         this.tourResponseList = responseList;

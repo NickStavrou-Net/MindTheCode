@@ -1,7 +1,7 @@
 package com.example.demo.mappers;
 
 import com.example.demo.pojos.User;
-import com.example.demo.pojos.UserResponse;
+import com.example.demo.responses.UserResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -20,7 +20,7 @@ public class UsersMapper {
         return users;
     }
 
-    private UserResponse mapUserToUserResponse(User user)
+    public UserResponse mapUserToUserResponse(User user)
     {
         return new UserResponse(
                         user.getId(),

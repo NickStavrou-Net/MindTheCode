@@ -1,7 +1,7 @@
 package com.example.demo.mappers;
 
 import com.example.demo.pojos.Tour;
-import com.example.demo.pojos.TourResponse;
+import com.example.demo.responses.TourResponse;
 import org.springframework.stereotype.Component;
 
 @Component

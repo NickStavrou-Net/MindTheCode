@@ -1,4 +1,4 @@
-package com.example.demo.pojos;
+package com.example.demo.responses;
 
 import com.example.demo.helpers.ApiErrorMessage;
 
@@ -7,11 +7,13 @@ public class GenericResponse<T>
     private T data;
     private ApiErrorMessage errorMessage;
 
-    public GenericResponse(ApiErrorMessage errorMessage) {
+    public GenericResponse(ApiErrorMessage errorMessage)
+    {
         this.errorMessage = errorMessage;
     }
 
-    public GenericResponse(T data) {
+    public GenericResponse(T data)
+    {
         this.data = data;
     }
 

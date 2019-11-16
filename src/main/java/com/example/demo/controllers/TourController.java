@@ -1,14 +1,13 @@
 package com.example.demo.controllers;
 
 import com.example.demo.helpers.ApiErrorMessage;
-import com.example.demo.pojos.GenericResponse;
-import com.example.demo.pojos.GetAllToursResponse;
-import com.example.demo.pojos.TourResponse;
+import com.example.demo.responses.GenericResponse;
+import com.example.demo.responses.GetAllToursResponse;
+import com.example.demo.responses.TourResponse;
 import com.example.demo.services.TourService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,14 +16,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("tour-office")
 public class TourController {
 
     @Autowired
     private TourService service;
 
     @GetMapping("/allTours")
-    public GetAllToursResponse getAllTours()
+    public GetAllToursResponse getAllTours ()
     {
         return new GetAllToursResponse(service.getAllTours());
     }
@@ -67,9 +66,4 @@ public class TourController {
         );
     }
 
-/*    @GetMapping("/getToursBySearch/{search}/{id}")
-    public GetAllToursResponse getToursBySearchCriteria(@PathVariable String search, @PathVariable int id)
-    {
-        return new GetAllToursResponse(service.getToursBySearch(search, id));
-    }*/
 }

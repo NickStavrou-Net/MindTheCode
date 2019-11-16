@@ -1,4 +1,4 @@
-package com.example.demo.pojos;
+package com.example.demo.responses;
 
 public class TourPackageResponse {
 
